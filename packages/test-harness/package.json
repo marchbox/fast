@@ -1,9 +1,9 @@
 {
-	"name": "test-harness",
+	"name": "@microsoft/fast-test-harness",
 	"private": true,
 	"version": "0.0.1",
 	"author": "Microsoft",
-	"description": "Internal package for testing",
+	"description": "Internal package for testing in FAST packages",
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
