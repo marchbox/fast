@@ -1,3 +1,3 @@
-import { startServer } from "@mai-ui/test-harness/server.mjs";
+import { startServer } from "@microsoft/fast-test-harness/server.js";
 
 await startServer();

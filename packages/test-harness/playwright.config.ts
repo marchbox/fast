@@ -3,14 +3,8 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
     retries: 3,
     fullyParallel: true,
-    use: {
-        contextOptions: {
-            reducedMotion: "reduce",
-        },
-    },
     projects: [
         { name: "chromium", use: devices["Desktop Chrome"] },
-        { name: "edge", use: devices["Desktop Edge"] },
         { name: "firefox", use: devices["Desktop Firefox"] },
         {
             name: "webkit",
@@ -21,9 +15,10 @@ export default defineConfig({
         },
     ],
     reporter: "list",
-    testMatch: "src/**/*.pw.spec.ts",
+    testDir: ".",
+    testMatch: "**/*.spec.ts",
     webServer: {
-        command: "npm run --if-present build:vite && npm run test:preview",
+        command: "npm run --if-present test:server",
         port: 5173,
         reuseExistingServer: true,
         stdout: "pipe",

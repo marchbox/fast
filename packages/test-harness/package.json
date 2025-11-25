@@ -6,6 +6,11 @@
 	"description": "Internal package for testing in FAST packages",
 	"license": "MIT",
 	"type": "module",
+	"exports": {
+		"./playwright.config.ts": "./playwright.config.ts",
+		"./server.js": "./server.js",
+		"./start.js": "./start.js"
+	},
 	"scripts": {
 		"build": "npm run build:tsc",
 		"build:tsc": "tsc -p ./tsconfig.json"

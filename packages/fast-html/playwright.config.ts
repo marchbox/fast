@@ -1,12 +1,3 @@
-import { defineConfig } from "@playwright/test";
+import defaultConfig from "@microsoft/fast-test-harness/playwright.config.ts";
 
-export default defineConfig({
-    testDir: ".",
-    testMatch: "**/*.spec.ts",
-    retries: 3,
-    webServer: {
-        command: "npm run test-server",
-        port: 5173,
-        reuseExistingServer: true,
-    },
-});
+export default defaultConfig;
